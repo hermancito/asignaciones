@@ -1,0 +1,36 @@
+#OJO ES MUY IMPORTANTE EN LOS ARCHIVOS yml SEGUIR UNA IDENTACIÓN
+herman_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: hermanUserBundle:Default:index }
+
+# llamamos a la ruta de forma descriptiva a la acción que vamos a llamar
+herman_user_index:
+#en el path nos referimos al controlador con el que vamos a trabajar (user) y a la acción a ejecutar del este controlador (index)
+    path:   /user/index
+#definimos el controlador a usar
+    defaults: { _controller: hermanUserBundle:User:index }
+    
+herman_user_add:
+    path: /user/add
+    defaults: { _controller: hermanUserBundle:User:add }
+    
+    
+#TAMBIÉN PODEMOS TRABAJAR CON RUTAS QUE RECIBEN PARÁMETROS
+herman_user_edit:
+    path:     /user/edit/{id}
+    defaults: { _controller: hermanUserBundle:User:edit }
+#podemos establecer requerimientos para el valor der page, en este caso usamos la expresión regular para que solo sea un nº
+    requirements:
+        id: \d+
+        
+herman_user_view:
+    path: /user/view/{id}
+    defaults: { _controller: hermanUserBundle:User:view }
+    requirements:
+        id: \d+
+        
+herman_user_delete:
+    path: /user/delete/{id}
+    defaults: { _controller: hermanUserBundle:User:delete }
+    requirements:
+        id: \d+
