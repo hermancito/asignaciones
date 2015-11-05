@@ -1,0 +1,13 @@
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: c9
+    database_user: hermancito
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 2435e8975a2e0e332df21c933adf5e2331ee739c
+    database_driver: pdo_mysql
+    database_path: null
