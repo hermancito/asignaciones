@@ -143,6 +143,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'herman\\UserBundle\\Controller\\UserController::addAction',  '_route' => 'herman_user_add',);
             }
 
+            // herman_user_create
+            if ($pathinfo === '/user/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_herman_user_create;
+                }
+
+                return array (  '_controller' => 'herman\\UserBundle\\Controller\\UserController::createAction',  '_route' => 'herman_user_create',);
+            }
+            not_herman_user_create:
+
             // herman_user_edit
             if (0 === strpos($pathinfo, '/user/edit') && preg_match('#^/user/edit/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'herman_user_edit')), array (  '_controller' => 'herman\\UserBundle\\Controller\\UserController::editAction',));
@@ -156,6 +167,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // herman_user_delete
             if (0 === strpos($pathinfo, '/user/delete') && preg_match('#^/user/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'herman_user_delete')), array (  '_controller' => 'herman\\UserBundle\\Controller\\UserController::deleteAction',));
+            }
+
+            // herman_user_redirect_add
+            if ($pathinfo === '/user/create') {
+                return array (  '_controller' => 'herman\\UserBundle\\Controller\\UserController::addAction',  'path' => '/user/add',  'permanent' => true,  '_route' => 'herman_user_redirect_add',);
             }
 
         }

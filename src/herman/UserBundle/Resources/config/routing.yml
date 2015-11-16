@@ -14,6 +14,11 @@ herman_user_add:
     path: /user/add
     defaults: { _controller: hermanUserBundle:User:add }
     
+herman_user_create:
+    path: /user/create
+    defaults: { _controller: hermanUserBundle:User:create }
+    methods: POST
+    
     
 #TAMBIÉN PODEMOS TRABAJAR CON RUTAS QUE RECIBEN PARÁMETROS
 herman_user_edit:
@@ -34,3 +39,10 @@ herman_user_delete:
     defaults: { _controller: hermanUserBundle:User:delete }
     requirements:
         id: \d+
+        
+herman_user_redirect_add:
+    path: /user/create
+    defaults:
+       _controller: hermanUserBundle:User:add
+       path: /user/add
+       permanent: true

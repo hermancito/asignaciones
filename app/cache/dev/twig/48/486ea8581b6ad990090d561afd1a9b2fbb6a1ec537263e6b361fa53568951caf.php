@@ -8,7 +8,7 @@ class __TwigTemplate_14b13bdb594945033690852bd08afb14df680207822deb9adac45ded5e8
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "default/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("layout.html.twig", "default/index.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
             'stylesheets' => array($this, 'block_stylesheets'),
@@ -17,32 +17,33 @@ class __TwigTemplate_14b13bdb594945033690852bd08afb14df680207822deb9adac45ded5e8
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9c69e280412312b407c1ee406a8d0a66059d6279b19d702e5e926524d558220f = $this->env->getExtension("native_profiler");
-        $__internal_9c69e280412312b407c1ee406a8d0a66059d6279b19d702e5e926524d558220f->enter($__internal_9c69e280412312b407c1ee406a8d0a66059d6279b19d702e5e926524d558220f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
+        $__internal_685ad466906b909676aa433ac2e88ef8c1b95e883744916c9eeca3305aae2330 = $this->env->getExtension("native_profiler");
+        $__internal_685ad466906b909676aa433ac2e88ef8c1b95e883744916c9eeca3305aae2330->enter($__internal_685ad466906b909676aa433ac2e88ef8c1b95e883744916c9eeca3305aae2330_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9c69e280412312b407c1ee406a8d0a66059d6279b19d702e5e926524d558220f->leave($__internal_9c69e280412312b407c1ee406a8d0a66059d6279b19d702e5e926524d558220f_prof);
+        $__internal_685ad466906b909676aa433ac2e88ef8c1b95e883744916c9eeca3305aae2330->leave($__internal_685ad466906b909676aa433ac2e88ef8c1b95e883744916c9eeca3305aae2330_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_121f3c8dfc9826e1cc626c769f7d286e422543565a44a90a0cd234b8b7faa575 = $this->env->getExtension("native_profiler");
-        $__internal_121f3c8dfc9826e1cc626c769f7d286e422543565a44a90a0cd234b8b7faa575->enter($__internal_121f3c8dfc9826e1cc626c769f7d286e422543565a44a90a0cd234b8b7faa575_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_e54cf870d5bf2d28e840c8ef6e92d513b745520f746ed095a5547b940fc9ea77 = $this->env->getExtension("native_profiler");
+        $__internal_e54cf870d5bf2d28e840c8ef6e92d513b745520f746ed095a5547b940fc9ea77->enter($__internal_e54cf870d5bf2d28e840c8ef6e92d513b745520f746ed095a5547b940fc9ea77_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <div id=\"wrapper\">
+        echo "
+    <div id=\"wrapper\">
         <div id=\"container\">
             <div id=\"welcome\">
                 <h1><span>Welcome to</span> Symfony ";
-        // line 7
+        // line 8
         echo twig_escape_filter($this->env, twig_constant("Symfony\\Component\\HttpKernel\\Kernel::VERSION"), "html", null, true);
         echo "</h1>
             </div>
@@ -53,7 +54,7 @@ class __TwigTemplate_14b13bdb594945033690852bd08afb14df680207822deb9adac45ded5e8
 
                     Your application is ready to start working on it at:
                     <code>";
-        // line 15
+        // line 16
         echo twig_escape_filter($this->env, (isset($context["base_dir"]) ? $context["base_dir"] : $this->getContext($context, "base_dir")), "html", null, true);
         echo "/</code>
                 </p>
@@ -80,7 +81,7 @@ class __TwigTemplate_14b13bdb594945033690852bd08afb14df680207822deb9adac45ded5e8
 
                     Read Symfony documentation to learn
                     <a href=\"http://symfony.com/doc/";
-        // line 39
+        // line 40
         echo twig_escape_filter($this->env, twig_slice($this->env, twig_constant("Symfony\\Component\\HttpKernel\\Kernel::VERSION"), 0, 3), "html", null, true);
         echo "/book/page_creation.html\">
                         How to create your first page in Symfony
@@ -92,17 +93,17 @@ class __TwigTemplate_14b13bdb594945033690852bd08afb14df680207822deb9adac45ded5e8
     </div>
 ";
         
-        $__internal_121f3c8dfc9826e1cc626c769f7d286e422543565a44a90a0cd234b8b7faa575->leave($__internal_121f3c8dfc9826e1cc626c769f7d286e422543565a44a90a0cd234b8b7faa575_prof);
+        $__internal_e54cf870d5bf2d28e840c8ef6e92d513b745520f746ed095a5547b940fc9ea77->leave($__internal_e54cf870d5bf2d28e840c8ef6e92d513b745520f746ed095a5547b940fc9ea77_prof);
 
     }
 
-    // line 49
+    // line 50
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_5648ebd3885a156a8c65629887c4cb577012491c77612dd62852f45c0e9bdad7 = $this->env->getExtension("native_profiler");
-        $__internal_5648ebd3885a156a8c65629887c4cb577012491c77612dd62852f45c0e9bdad7->enter($__internal_5648ebd3885a156a8c65629887c4cb577012491c77612dd62852f45c0e9bdad7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_8d1e2ea0a7bef78354205337edc383f2761d492b1cae727af379eae3c425954b = $this->env->getExtension("native_profiler");
+        $__internal_8d1e2ea0a7bef78354205337edc383f2761d492b1cae727af379eae3c425954b->enter($__internal_8d1e2ea0a7bef78354205337edc383f2761d492b1cae727af379eae3c425954b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 50
+        // line 51
         echo "<style>
     body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
     h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
@@ -131,7 +132,7 @@ class __TwigTemplate_14b13bdb594945033690852bd08afb14df680207822deb9adac45ded5e8
 </style>
 ";
         
-        $__internal_5648ebd3885a156a8c65629887c4cb577012491c77612dd62852f45c0e9bdad7->leave($__internal_5648ebd3885a156a8c65629887c4cb577012491c77612dd62852f45c0e9bdad7_prof);
+        $__internal_8d1e2ea0a7bef78354205337edc383f2761d492b1cae727af379eae3c425954b->leave($__internal_8d1e2ea0a7bef78354205337edc383f2761d492b1cae727af379eae3c425954b_prof);
 
     }
 
@@ -147,12 +148,13 @@ class __TwigTemplate_14b13bdb594945033690852bd08afb14df680207822deb9adac45ded5e8
 
     public function getDebugInfo()
     {
-        return array (  106 => 50,  100 => 49,  84 => 39,  57 => 15,  46 => 7,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  107 => 51,  101 => 50,  85 => 40,  58 => 16,  47 => 8,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
-/* {% extends 'base.html.twig' %}*/
+/* {% extends 'layout.html.twig' %}*/
 /* */
 /* {% block body %}*/
+/* */
 /*     <div id="wrapper">*/
 /*         <div id="container">*/
 /*             <div id="welcome">*/
